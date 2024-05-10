@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div class="content">
+  <div class="explain">
+    <p>
+      Hello! I'm Yugo Ogura.<br />
+      <span class="emphasis">Full Stack Engineer</span>
+      with
+      <span class="emphasis">+5 years of experience</span>.<br />
+      My motivation comes from creating good products.<br />
+      I believe <span class="emphasis">good products comes from good team</span
+      >.
+    </p>
+  </div>
+  <Image
+    class="pic"
+    width="828"
+    height="827"
+    src="/images/me.png"
+    alt="my pic"
+  />
+</div>
+
+<style>
+  .content {
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
+    font-size: 20px;
+
+    .explain {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+    }
+    .pic {
+      height: 200px;
+      width: 200px;
+      border-radius: 100%;
+      aspect-ratio: 1 / 1;
+      margin: auto;
+    }
+    .emphasis {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  @container (width < 500px) {
+    .content {
+      flex-direction: column;
+      font-size: 18px;
+
+      .pic {
+        height: 150px;
+        width: 150px;
+      }
+
+      .emphasis {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+  @container (width < 400px) {
+    .content {
+      .pic {
+        height: 120px;
+        width: 120px;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-van",
+  "type": "module",
+  "private": true,
+  "version": "1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.6.0",
+    "astro": "^4.8.2",
+    "open-props": "^1.7.4",
+    "typescript": "^5.4.5"
+  }
+}
